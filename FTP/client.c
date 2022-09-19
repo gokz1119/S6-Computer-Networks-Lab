@@ -22,7 +22,7 @@ int main()
     else
         printf("Socket is created\n");
     servaddr.sin_family = AF_INET;
-    servaddr.sin_addr.s_addr = "192.168.1.101";
+    servaddr.sin_addr.s_addr = INADDR_ANY;
     servaddr.sin_port = htons(cport);
     if (connect(csd, (struct sockaddr *)&servaddr, sizeof(servaddr)) < 0)
         printf("Error in connection\n");

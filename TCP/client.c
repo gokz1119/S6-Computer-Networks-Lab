@@ -4,7 +4,7 @@
 #include <string.h>
 #include <sys/socket.h>
 #include <unistd.h>
-#include <arpa/inet.h>
+#include <arpa/inet.h> //for htons() and inet_addr()
 
 #define MAX 80
 #define PORT 8080

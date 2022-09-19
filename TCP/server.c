@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <netdb.h>
-#include <netinet/in.h>
+#include <netinet/in.h> //contains sin_family, sin_port, sin_addr, which is a structure {s_addr}
 #include <stdlib.h>
 #include <string.h>
 #include <sys/socket.h>
 #include <sys/types.h>
-#include <unistd.h>
+#include <unistd.h> //for open, close, etc
 
 #define MAX 80
 #define PORT 8080
@@ -58,6 +58,7 @@ int main()
     }
     else
         printf("Socket successfully created..\n");
+        
     bzero(&servaddr, sizeof(servaddr));
 
     // assign IP, PORT
