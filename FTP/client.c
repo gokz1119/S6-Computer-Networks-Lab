@@ -36,6 +36,7 @@ int main()
     send(csd, name, sizeof(name), 0);
     while (1)
     {
+        bzero(rcvg, 100);
         s = recv(csd, rcvg, 100, 0);
         rcvg[s] = '\0';
         if (strcmp(rcvg, "error") == 0)
@@ -50,6 +51,7 @@ int main()
         else
             fputs(rcvg, stdout);
         fprintf(fp, "%s", rcvg);
-        return 0;
+        
     }
+    return 0;
 }

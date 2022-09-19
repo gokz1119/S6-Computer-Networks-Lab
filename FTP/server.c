@@ -54,11 +54,11 @@ int main()
             }
             sleep(1);
         }
-        if (!fgets(fileread, sizeof(fileread), fp))
-        {
+        // if (!fgets(fileread, sizeof(fileread), fp))
+        // {
             // when file pointer reaches end of file, file transfer “completed” message is send to accepted client connection using newsd, socket file descriptor.
-            send(newsd, "completed", 999999999, 0);
-        }
+            send(newsd, "completed", 100, 0);
+        // }
         return (0);
     }
 }
